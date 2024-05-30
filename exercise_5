@@ -1,0 +1,44 @@
+package assignment_5;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class Exercise_5 {
+
+	public static void main(String[] args) throws FileNotFoundException {
+	String strWord; 
+	String encryptedWord;
+	int mid;
+	
+	//Create and write to input.in
+	PrintWriter pw = new PrintWriter(new FileOutputStream("input.in"));
+	pw.println("Life is either a daring adventure or nothing at all");
+	pw.close();
+	
+	// Read from input.in
+	Scanner scnr = new Scanner(new FileInputStream("input.in"));
+	
+	// Write to output
+	PrintWriter pw2 = new PrintWriter(new FileOutputStream("output.out"));
+	
+	while (scnr.hasNext()) {
+		strWord = scnr.next();
+		if (strWord.length() % 2 == 0) {
+			mid = strWord.length() / 2;
+		}
+		else {
+			mid = (strWord.length() + 1) / 2;
+		}
+	encryptedWord = strWord.substring(mid) + strWord.substring(0, mid);
+	encryptedWord = encryptedWord.toUpperCase();
+	
+	pw2.println(strWord + " " + encryptedWord);
+	}
+	scnr.close();
+	pw2.close();
+		}
+
+	}
