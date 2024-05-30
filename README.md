@@ -1,6 +1,6 @@
 The exercises/assignments in this repository are the projects I've completing using Java & Python computer programming skills I've learned in Codedex (programming learning platform), my bridge program & MS in data science program at Grand Canyon University.  
 
-Exercise 1 
+Exercise 1 (Java)
 Write a java program that prompts the user to enter a 5-digit positive integer. Using only the / and % operations, compute each individual digit and display the sum of the digits. 
 
 Exercise 2 
@@ -18,3 +18,6 @@ Consider both the scenario where the input file does not contain enough contribu
 
 Exercise 5 
 Write a java program that reads text from a file. For each word in the file, output the original word and its encrypted equivalent in all-caps.
+
+Rock Paper Scissors (Python)
+Create a rock_paper_scissors.py program where the user plays a round of Rock, Paper, Scissors with the computer.
