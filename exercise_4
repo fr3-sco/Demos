@@ -1,0 +1,64 @@
+package assignment_4;
+
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
+
+import java.util.Random;
+
+public class exercise_4 {
+	    public static void main(String[] args) throws FileNotFoundException {
+	        int numValues = 0;
+	        double totalGoal = 10000000.00;
+	        double totalCollected = 0.00;
+	        double num;
+	        double maxNum = Double.MIN_VALUE; // Initialize to smallest possible value
+	        double minNum = Double.MAX_VALUE; // Initialize to largest possible value
+	       
+	        // write to input file
+	        FileOutputStream input = new FileOutputStream("input.in");
+	        PrintWriter pw = new PrintWriter(input);
+
+	        Random rnd = new Random();
+
+	        for (int i = 0; i < 4000; i++) {
+	            double newRandNum = rnd.nextDouble() * 10000 + 1;
+	            pw.print(newRandNum + " ");
+	        }
+	        pw.close();
+
+	        // read from input file
+	        FileInputStream in = new FileInputStream("input.in");
+	        Scanner scnr = new Scanner(in);
+
+	        // write to results.out
+	        FileOutputStream output = new FileOutputStream("results.out");
+	        PrintWriter pw2 = new PrintWriter(output);
+
+	        while (scnr.hasNext()) {
+	            num = scnr.nextDouble();
+	            totalCollected += num; // Accumulate total collected
+	            if (totalCollected >= totalGoal) {
+	                break; // Exit loop if goal reached or exceeded
+	            }
+	            numValues++;
+	            if (num > maxNum) {
+	                maxNum = num;
+	            }
+	            if (num < minNum) {
+	                minNum = num;
+	            }
+	         }
+	        scnr.close();
+
+	        pw2.println(numValues + " contributions have been made");
+	        pw2.println("The maximum contribution received was $" + String.format("%.2f", maxNum));
+	        pw2.println("The minimum contribution received was $" + String.format("%.2f", minNum));
+	        pw2.println("The average contribution amount was $" + String.format("%.2f", (totalCollected / numValues)));
+	        pw2.println("A total of $" + String.format("%.2f", totalCollected) + " was collected.");
+
+	        pw2.close();
+	    }
+	}
