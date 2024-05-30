@@ -1,0 +1,34 @@
+package exercise_3;
+
+import java.util.Scanner;
+
+public class assignment_3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner keyboard = new Scanner(System.in);
+		int num = 3001;
+		int guess = 0;
+		
+		System.out.println("I'm thinking of a number between 1 and 10000. \n" + 
+							"Guess the number:");
+		
+		guess = keyboard.nextInt();
+		
+	
+		while(guess != num) {
+            if (guess > num) {
+                System.out.println("Almost. Lower!");
+                System.out.println("Try again:");
+            } 
+            
+            if (guess < num) {
+                System.out.println("Almost. Higher!");
+                System.out.println("Try again:");
+            } 
+            guess = keyboard.nextInt();
+        }
+        
+		System.out.println("Congratulations, you got the number!");
+	}
+}
