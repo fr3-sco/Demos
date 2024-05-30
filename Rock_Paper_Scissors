@@ -1,0 +1,58 @@
+import random
+
+player = int(input("===================\nRock Paper Scissors\n===================\n1) ✊ \n2) ✋ \n3) ✌️\nPick a number: "))
+
+
+computer = random.randint(1,3)
+
+if player == 1:
+
+    print('\nYou chose: ✊')
+
+elif player == 2:
+
+    print('\nYou chose: ✋')
+
+else:
+
+    print('\nYou chose: ✌️')
+
+
+
+if computer == 1:
+
+    print('CPU chose: ✊')
+
+elif computer == 2:
+
+    print('CPU chose: ✋')
+
+else:
+
+    print('CPU chose: ✌️')
+
+
+
+if player == computer:
+
+    print('You tied!')
+
+elif player == 1 and computer == 2: #rock and paper
+
+    print('The computer won! womp womp')
+
+elif player == 2 and computer == 3: #paper and scissors
+
+    print('The computer won! womp womp')
+
+elif player == 2 and computer == 1: #paper and rock
+
+    print('You won!')
+
+elif player == 3 and computer == 1: #scissors and rock
+
+    print('The computer won! womp womp')    
+
+elif player == 3 and computer == 2: #scissors and paper
+
+    print('You won!')
