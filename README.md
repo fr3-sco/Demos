@@ -1,4 +1,4 @@
-The exercises/assignments in this repository are the projects I've completing using computer programming skills I've learned in my bridge program and MS in data science program at Grand Canyon University.  
+The exercises/assignments in this repository are the projects I've completing using Java & Python computer programming skills I've learned in Codedex, my bridge program & MS in data science program at Grand Canyon University.  
 
 Exercise 1 
 Write a java program that prompts the user to enter a 5-digit positive integer. Using only the / and % operations, compute each individual digit and display the sum of the digits. 
