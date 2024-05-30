@@ -1,0 +1,28 @@
+package week_1;
+
+import java.util.Scanner;
+
+public class exercise_1 {
+
+	public static void main(String[] args) {
+		Scanner userInput = new Scanner(System.in); 
+	
+		
+		System.out.println("Enter a 5-digit postive integer: ");
+		
+		int number = userInput.nextInt();
+		
+		int num1 = number / 10000; 
+		int num2 = (number % 10000) / 1000;
+		int num3 = (number % 1000) / 100;
+		int num4 = (number % 100) / 10;
+		int num5 = (number % 10) / 1; 
+		
+		int sum = num1 + num2 + num3 + num4 + num5;
+		
+		System.out.print("Sum of the digits = " + sum);
+
+		userInput.close();
+	}
+
+}
